@@ -488,7 +488,6 @@ function initCinematicLoader() {
         wrap.classList.add('loader-reveal');
         setTimeout(() => {
           initTextScramble();
-          initTypingAnimation();
           wrap.classList.add('done');
           wrap.setAttribute('aria-hidden', 'true');
         }, 900);

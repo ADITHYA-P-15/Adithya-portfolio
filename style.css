@@ -438,17 +438,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
 }
 
-.hero-typing {
+.hero-static-role {
   color: var(--accent);
-  position: relative;
-}
-
-.hero-typing::after {
-  content: '|';
-  position: relative;
-  color: var(--accent);
-  animation: blink 1s step-end infinite;
-  font-weight: 300;
 }
 
 .hero-description {
