@@ -145,8 +145,8 @@
         </h2>
         <p class="hero-description">
           I'm an AI/ML Engineer and Full-Stack Developer specializing in building intelligent systems — 
-          from domain-specific LLMs and agentic workflows to production-grade web platforms. 
-          Currently working on AI for climate tech at <a href="#experience">CRID India</a>.
+          from agentic workflows and document-intelligence pipelines to production-grade web platforms. 
+          Currently building AI for climate tech at <a href="#experience">CRID India</a>.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary">
@@ -295,7 +295,7 @@
                   <span class="fc-project-dot"></span>
                   <div>
                     <p class="fc-item-title">AI Life Sage</p>
-                    <p class="fc-item-desc">AI-powered personal OS — habits, finance, journaling & smart analytics.</p>
+                    <p class="fc-item-desc">AI-powered self-development platform — habits, finance, journaling & smart analytics in one place.</p>
                   </div>
                 </div>
                 <div class="fc-project">
@@ -446,25 +446,47 @@
             <div class="timeline-header">
               <div>
                 <h3 class="timeline-role">AI/ML Intern <span class="timeline-company">@ CRID India</span></h3>
-                <p class="timeline-location">Remote / Hybrid · Climate Tech</p>
+                <p class="timeline-location">Remote / Hybrid · Climate Tech &amp; Decarbonisation</p>
               </div>
               <span class="timeline-date">May 2026 – Present</span>
             </div>
+
             <ul class="timeline-bullets">
-              <li>Design and develop AI systems supporting research across industrial decarbonisation, energy policy, climate finance, and carbon markets.</li>
-              <li>Built executive intelligence workflows automating stakeholder profiling, meeting preparation, and organization research using LLMs, agentic workflows, and structured retrieval.</li>
-              <li>Developing <strong>Feynman</strong>, a domain-specific research assistant trained on Indian energy-policy literature using continued pretraining, QLoRA fine-tuning, hybrid retrieval, and document intelligence pipelines.</li>
-              <li>Engineered document-processing pipelines incorporating OCR, layout-aware parsing, metadata extraction, semantic chunking, and hybrid search for long-form policy documents.</li>
-              <li>Contributed to production-ready backend services using Python, FastAPI, PostgreSQL, Docker, and cloud deployment workflows.</li>
+              <li>Designed and shipped AI systems across industrial decarbonisation, climate finance, and carbon markets — end-to-end, from prototype to Dockerised production.</li>
+
+              <li>
+                <strong>AI Auditor for BEE</strong> — Built a complete DPR automation pipeline: financial calculations, type-wise extraction (A/B/C), LLM-assisted content generation for Type C, annexure-wise ingestion with embedded flowcharts and photos, Supabase database, and a full frontend UI — all containerised and demo-shipped.
+              </li>
+
+              <li>
+                <strong>Feynman Document Pipeline</strong> — Engineered a 6-stage document-intelligence pipeline for energy-policy corpora: SHA-256 file deduplication + scanned/digital classification → 4-engine extraction (PyMuPDF, Native Structured, Docling ML-layout, Auto-Structured) with OCR and parallel processing → Unicode/header/whitespace cleaning → MinHash LSH near-duplicate detection at ≥85% similarity threshold → 5-heuristic quality filtering (word count, alphabetic ratio, digit ratio, word length, non-ASCII) → Qwen-token-aware chunking. Output: JSONL + Parquet ready for model training.
+              </li>
+
+              <li>
+                <strong>PDF Parser Benchmark</strong> — Designed an industry-grade evaluation harness across 5 tracks (text: 1−CER, structure: Detection F1 + reading-order τ, table: GriTS + Header F1, chart: Label F1, furniture). Benchmarked PyMuPDF (0.738), MinerU 3.4.5 (0.741), and Docling 2.127.0 (0.909 composite). Docling led across all tracks; uncovered 3 scoring bugs in the harness, including one that had inverted the parser ranking.
+              </li>
+
+              <li>
+                <strong>KYC Claude Skill</strong> — Built a person-wise background intelligence tool: auto-extracts professional history from a LinkedIn URL and generates a structured PDF report — used by the team for investor due-diligence before meetings.
+              </li>
+
+              <li>
+                <strong>Outlook + Calendar Intelligence Dashboard</strong> — Full-stack multi-user platform: Next.js (static export) + FastAPI + SQLite + MSAL multi-user Microsoft auth + n8n (30-min scheduled pulls) + LangGraph ReAct agent + GLM via Z.ai. Two separate app registrations for delegated vs application permissions. Single-port Docker Compose deploy; upsert write path shared by n8n and real-time Refresh — data always consistent.
+              </li>
             </ul>
+
             <div class="timeline-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">LangGraph</span>
               <span class="tech-tag">Docker</span>
-              <span class="tech-tag">LLMs</span>
-              <span class="tech-tag">QLoRA</span>
-              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Docling</span>
+              <span class="tech-tag">MinHash LSH</span>
+              <span class="tech-tag">Claude API</span>
+              <span class="tech-tag">Microsoft Graph</span>
+              <span class="tech-tag">n8n</span>
               <span class="tech-tag">Agentic AI</span>
             </div>
           </div>
@@ -519,8 +541,8 @@
               </a>
             </div>
           </div>
-          <h3>AI Life Sage — Personal AI Operating System</h3>
-          <p>Full-stack AI productivity platform integrating habit tracking, finance management, journaling, hobbies, and AI-powered insights. Features secure authentication, REST APIs, PostgreSQL schema, audit logging, and AI-assisted analytics.</p>
+          <h3>AI Life Sage — All-in-One Self-Development Platform</h3>
+          <p>Full-stack AI-powered self-development platform that unifies habit tracking, personal finance, journaling, and hobby management under one roof. Provides AI-driven insights and smart analytics to help users grow intentionally — powered by secure authentication, REST APIs, a relational PostgreSQL schema, and comprehensive audit logging.</p>
           <div class="project-tech">
             <span>React</span>
             <span>·</span>
@@ -618,7 +640,7 @@
             </div>
           </div>
           <h3>RUGVED — Official Website</h3>
-          <p>Designed and developed the official website for RUGVED, MIT Manipal's interdisciplinary defense-robotics student project. The site showcases team members, sponsor partnerships, technical achievements, and active project portfolios with a responsive, modern interface.</p>
+          <p>Designed and built the official website for RUGVED, MIT Manipal's interdisciplinary defense-robotics student project — handling end-to-end web development from design to deployment. The site features team profiles, sponsor showcases, technical achievements, and project portfolios with a clean, responsive interface. Also created social media graphics and visual assets to support the team's online presence.</p>
           <div class="project-tech">
             <span>HTML</span>
             <span>·</span>
@@ -735,11 +757,12 @@
       <div class="leadership-container">
         <div class="leadership-card reveal">
           <h3>RUGVED — MIT Manipal</h3>
-          <div class="role">Management Team · Defense Robotics</div>
+          <div class="role">Management Head · Defense Robotics</div>
           <ul>
-            <li>Developed and maintained the organization's official website.</li>
-            <li>Coordinated sponsorship outreach, securing 15+ industry sponsors.</li>
-            <li>Managed finance and external relations within a 40+ member interdisciplinary defense-robotics team.</li>
+            <li>Led sponsorship strategy and outreach, successfully onboarding 20+ industry sponsors for the team.</li>
+            <li>Designed and developed the official RUGVED website end-to-end, serving as the team's primary digital presence.</li>
+            <li>Created social media graphics and visual content to drive audience engagement and sponsor visibility.</li>
+            <li>Managed external relations and financial operations within a 40+ member interdisciplinary defense-robotics team.</li>
           </ul>
         </div>
 
